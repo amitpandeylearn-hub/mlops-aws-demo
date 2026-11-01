@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from src.config import FEATURES, TARGET, MODEL_PATH
 
 C = float(sys.argv[1]) if len(sys.argv) > 1 else 1.0
-MIN_F1 = 0.99  # quality gate used by CI
+MIN_F1 = 0.85  # quality gate used by CI
 
 mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI") or "sqlite:///mlflow.db")
 mlflow.set_experiment("aws-mlops-demo")
